@@ -2,6 +2,8 @@ package main
 
 import "time"
 
+// 版本2：并行方案
+// 总耗时3600ms
 const (
 	idCheckTmCost   = 60
 	bodyCheckTmCost = 120

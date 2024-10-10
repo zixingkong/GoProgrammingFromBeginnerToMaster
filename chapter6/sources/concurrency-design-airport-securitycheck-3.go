@@ -2,6 +2,8 @@ package main
 
 import "time"
 
+// 版本3：并发方案
+// 总耗时：2160ms
 const (
 	idCheckTmCost   = 60
 	bodyCheckTmCost = 120
@@ -103,5 +105,5 @@ func main() {
 	}
 	time.Sleep(5 * time.Second)
 	close(queue) // 为了打印各通道的处理时长
-	time.Sleep(1000 * time.Second)
+	time.Sleep(10 * time.Second)
 }
