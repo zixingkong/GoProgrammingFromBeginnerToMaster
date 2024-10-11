@@ -27,7 +27,7 @@ func spawnGroup(n int, f func(int)) chan struct{} {
 					return
 				}
 				// do the job
-				worker(j)
+				f(j)
 			}
 		}(i)
 	}
