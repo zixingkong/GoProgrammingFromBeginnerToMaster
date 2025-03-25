@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/wyy/code/github/go/GoProgrammingFromBeginnerToMaster/chapter1/sources",
+      "program": "/Users/wyy/code/github/go/GoProgrammingFromBeginnerToMaster/chapter1/sources/build/Debug/outDebug"
+    }
+  ]
+}

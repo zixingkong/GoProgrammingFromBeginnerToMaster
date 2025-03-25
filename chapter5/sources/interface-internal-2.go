@@ -68,6 +68,7 @@ func printNonEmptyInterface() {
 }
 
 func printEmptyInterfaceAndNonEmptyInterface() {
+	fmt.Println("================================printEmptyInterfaceAndNonEmptyInterface=================================")
 	var eif interface{} = T(5)
 	var err error = T(5)
 	println("eif:", eif)

@@ -24,7 +24,7 @@ func main() {
 	srv.RegisterOnShutdown(func() {
 		// 在一个单独的goroutine中执行
 		fmt.Println("clean resources on shutdown...")
-		time.Sleep(2 * time.Second)
+		time.Sleep(10 * time.Second)
 		fmt.Println("clean resources ok")
 		wg.Done()
 	})

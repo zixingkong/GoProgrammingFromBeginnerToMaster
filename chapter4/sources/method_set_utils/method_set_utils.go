@@ -1,4 +1,4 @@
-package main
+package method_set_utils
 
 import (
 	"fmt"
@@ -10,16 +10,18 @@ import (
 //
 // e.g.
 // for interface type I:
-//   utils.DumpMethodSet((*I)(nil))
+//
+//	utils.DumpMethodSet((*I)(nil))
 //
 // for non-interface type T:
-//   var t T
-//   utils.DumpMethodSet(&t)
+//
+//	var t T
+//	utils.DumpMethodSet(&t)
 //
 // for non-interface type *T:
-//   var pt = &T{}
-//   utils.DumpMethodSet(&pt)
 //
+//	var pt = &T{}
+//	utils.DumpMethodSet(&pt)
 func DumpMethodSet(i interface{}) {
 	v := reflect.TypeOf(i)
 	elemTyp := v.Elem()

@@ -1,0 +1,7 @@
+module github.com/method_set_2
+
+go 1.20
+
+replace github.com/method_set_utils => ../method_set_utils
+
+require github.com/method_set_utils v0.0.0-00010101000000-000000000000

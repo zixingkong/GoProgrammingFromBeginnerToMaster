@@ -31,7 +31,7 @@ func main() {
 	// producer goroutine
 	go func() {
 		for i := 0; i < 5; i++ {
-			time.Sleep(time.Second * 1)
+			time.Sleep(time.Second * 5)
 			c <- false
 		}
 
