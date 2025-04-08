@@ -25,7 +25,7 @@ func getASlice() *[5]int {
 
 func getAWriteOnlyChannel() chan<- int {
 	fmt.Println("invoke getAWriteOnlyChannel")
-	return make(chan int)
+	return make(chan int, 1)
 }
 
 func getANumToChannel() int {

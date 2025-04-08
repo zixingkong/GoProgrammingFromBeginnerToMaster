@@ -8,12 +8,12 @@ func bar() {
 }
 
 func foo() {
+	bar()
 	defer func() {
 		if e := recover(); e != nil {
 			fmt.Println("recovered from a panic")
 		}
 	}()
-	bar()
 }
 
 func main() {

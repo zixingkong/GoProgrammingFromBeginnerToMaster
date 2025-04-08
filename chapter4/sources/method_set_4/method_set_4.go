@@ -1,5 +1,7 @@
 package main
 
+import method_set_utils "github.com/method_set_utils"
+
 type Interface1 interface {
 	M1()
 }
@@ -20,5 +22,5 @@ type Interface4 interface {
 }
 
 func main() {
-	DumpMethodSet((*Interface3)(nil))
+	method_set_utils.DumpMethodSet((*Interface3)(nil))
 }

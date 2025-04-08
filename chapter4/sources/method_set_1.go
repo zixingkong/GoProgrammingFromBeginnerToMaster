@@ -15,6 +15,6 @@ func main() {
 	var pt *T
 	var i Interface
 
-	i = t
+	// i = t
 	i = pt
 }

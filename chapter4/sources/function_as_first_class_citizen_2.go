@@ -10,6 +10,6 @@ func greeting(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	//http.ListenAndServe(":8080", http.HandlerFunc(greeting))
-	http.ListenAndServe(":8080", greeting)
+	http.ListenAndServe(":8080", http.HandlerFunc(greeting))
+	// http.ListenAndServe(":8080", greeting)
 }
