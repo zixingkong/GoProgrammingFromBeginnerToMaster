@@ -9,6 +9,7 @@ func (t T) Error() string {
 }
 
 func printNilInterface() {
+	fmt.Println("================================printNilInterface=================================")
 	// nil接口变量
 	var i interface{} // 空接口类型
 	var err error     // 非空接口类型
@@ -21,6 +22,7 @@ func printNilInterface() {
 }
 
 func printEmptyInterface() {
+	fmt.Println("================================printEmptyInterface=================================")
 	// empty接口变量
 	var eif1 interface{} // 空接口类型
 	var eif2 interface{} // 空接口类型
@@ -47,6 +49,7 @@ func printEmptyInterface() {
 }
 
 func printNonEmptyInterface() {
+	fmt.Println("================================printNonEmptyInterface=================================")
 	var err1 error // 非空接口类型
 	var err2 error // 非空接口类型
 	err1 = (*T)(nil)
