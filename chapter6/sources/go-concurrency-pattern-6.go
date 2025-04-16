@@ -49,7 +49,7 @@ func main() {
 	time.Sleep(5 * time.Second)
 	// notify the worker goroutine group to exit
 	println("notify the worker group to exit...")
-	quit <- struct{}{}
+	quit <- struct{}{} 
 
 	timer := time.NewTimer(time.Second * 5)
 	defer timer.Stop()

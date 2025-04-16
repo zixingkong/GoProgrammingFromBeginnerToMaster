@@ -31,6 +31,16 @@ func square(in int) (int, bool) {
 func spawnGroup(name string, num int, f func(int) (int, bool), in <-chan int) <-chan int {
 	groupOut := make(chan int)
 	var outSlice []chan int
+	// Fan-in
+	// 扇出模式
+	//
+	//         worker1
+	//		 /
+	// 		/
+	// in ----> worker2
+	//		 \
+	//        \
+	//		   worker3
 	for i := 0; i < num; i++ {
 		out := make(chan int)
 		go func(i int) {
