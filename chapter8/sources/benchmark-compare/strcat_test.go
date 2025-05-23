@@ -13,7 +13,7 @@ var sl = []string{
 
 func Strcat(sl []string) string {
 	return concatStringByJoin(sl)
-	//return concatStringByOperator(sl)
+	// return concatStringByOperator(sl)
 }
 
 func concatStringByOperator(sl []string) string {

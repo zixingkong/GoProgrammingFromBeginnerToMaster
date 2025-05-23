@@ -10,6 +10,6 @@ func main() {
 		fmt.Fprintf(w, "Hello, World!\n")
 	})
 	fmt.Println(http.ListenAndServeTLS("localhost:8081",
-		"../server-signed-by-ca.crt",
-		"../server.key", nil))
+		"/Users/wyy/code/github/https/certificate/server-signed-by-ca.crt",
+		"/Users/wyy/code/github/https/certificate/server.key", nil))
 }

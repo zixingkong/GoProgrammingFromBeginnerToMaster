@@ -10,7 +10,7 @@ import (
 
 func main() {
 	pool := x509.NewCertPool()
-	caCertPath := "../ca.crt"
+	caCertPath := "/Users/wyy/code/github/https/certificate/ca.crt"
 
 	caCrt, err := ioutil.ReadFile(caCertPath)
 	if err != nil {

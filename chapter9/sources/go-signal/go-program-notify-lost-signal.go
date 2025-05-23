@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	c := make(chan os.Signal, 1)
+	c := make(chan os.Signal, 5)
 	signal.Notify(c, syscall.SIGINT)
 
 	// 在这10s期间，我们多次触发SIGINT信号

@@ -5,34 +5,35 @@
 package mailer
 
 import (
-	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
+
+	gomock "github.com/golang/mock/gomock"
 )
 
-// MockMailer is a mock of Mailer interface
+// MockMailer is a mock of Mailer interface.
 type MockMailer struct {
 	ctrl     *gomock.Controller
 	recorder *MockMailerMockRecorder
 }
 
-// MockMailerMockRecorder is the mock recorder for MockMailer
+// MockMailerMockRecorder is the mock recorder for MockMailer.
 type MockMailerMockRecorder struct {
 	mock *MockMailer
 }
 
-// NewMockMailer creates a new mock instance
+// NewMockMailer creates a new mock instance.
 func NewMockMailer(ctrl *gomock.Controller) *MockMailer {
 	mock := &MockMailer{ctrl: ctrl}
 	mock.recorder = &MockMailerMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMailer) EXPECT() *MockMailerMockRecorder {
 	return m.recorder
 }
 
-// SendMail mocks base method
+// SendMail mocks base method.
 func (m *MockMailer) SendMail(subject, sender, destination, body string) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendMail", subject, sender, destination, body)
@@ -40,7 +41,7 @@ func (m *MockMailer) SendMail(subject, sender, destination, body string) error {
 	return ret0
 }
 
-// SendMail indicates an expected call of SendMail
+// SendMail indicates an expected call of SendMail.
 func (mr *MockMailerMockRecorder) SendMail(subject, sender, destination, body interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMail", reflect.TypeOf((*MockMailer)(nil).SendMail), subject, sender, destination, body)

@@ -24,7 +24,7 @@ func TestCompare(t *testing.T) {
 	}
 
 	a, b = "", "a"
-	i = -1
+	i = 0
 	cmp = strings.Compare(a, b)
 	if cmp != i {
 		t.Errorf(`want %v, but Compare(%q, %q) = %v`, i, a, b, cmp)

@@ -9,5 +9,5 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, World!\n")
 	})
-	fmt.Println(http.ListenAndServeTLS("localhost:8081", "server.crt", "server.key", nil))
+	fmt.Println(http.ListenAndServeTLS("localhost:8081", "/Users/wyy/code/github/go/server.crt", "/Users/wyy/code/github/go/server.key", nil))
 }

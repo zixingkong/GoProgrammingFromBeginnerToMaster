@@ -10,7 +10,7 @@ import (
 
 func main() {
 	pool := x509.NewCertPool()
-	caCertPath := "../ca.crt"
+	caCertPath := "/Users/wyy/code/github/https/certificate/ca.crt"
 
 	caCrt, err := ioutil.ReadFile(caCertPath)
 	if err != nil {
@@ -30,5 +30,5 @@ func main() {
 		},
 	}
 
-	fmt.Println(s.ListenAndServeTLS("../server-signed-by-ca.crt", "../server.key"))
+	fmt.Println(s.ListenAndServeTLS("/Users/wyy/code/github/https/certificate/server-signed-by-ca.crt", "/Users/wyy/code/github/https/certificate/server.key"))
 }

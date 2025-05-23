@@ -23,7 +23,7 @@ func main() {
 	log.Println("dial ok")
 
 	time.Sleep(time.Second * 2)
-	data := os.Args[1]
-	conn.Write([]byte(data))
+	// data := os.Args[1]
+	// conn.Write([]byte(data))
 	log.Println("send data ok")
 }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/sha256"
 	"flag"
 	"fmt"
 	"log"
@@ -75,6 +76,7 @@ func main() {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM)
 	wg.Add(1)
+	// 修改后的后台协程逻辑
 	go func() {
 		for {
 			select {
@@ -85,10 +87,14 @@ func main() {
 				s1 := "hello,"
 				s2 := "gopher"
 				s3 := "!"
-				_ = s1 + s2 + s3
+				result := s1 + s2 + s3
+				// 模拟实际计算（SHA256 哈希）
+				h := sha256.New()
+				h.Write([]byte(result))
+				_ = h.Sum(nil)
+				runtime.KeepAlive(result)
 			}
-
-			time.Sleep(10 * time.Millisecond)
+			time.Sleep(1 * time.Millisecond) // 减少休眠
 		}
 	}()
 	wg.Wait()

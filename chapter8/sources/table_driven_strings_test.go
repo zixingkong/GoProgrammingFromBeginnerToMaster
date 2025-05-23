@@ -10,8 +10,8 @@ func TestCompare(t *testing.T) {
 		a, b string
 		i    int
 	}{
-		{"", "", 0},
-		{"a", "", 1},
+		{"", "", 1},
+		{"a", "", 0},
 		{"", "a", -1},
 	}
 

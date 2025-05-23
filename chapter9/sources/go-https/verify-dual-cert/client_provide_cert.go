@@ -10,7 +10,7 @@ import (
 
 func main() {
 	pool := x509.NewCertPool()
-	caCertPath := "../ca.crt"
+	caCertPath := "/Users/wyy/code/github/https/certificate/ca.crt"
 
 	caCrt, err := ioutil.ReadFile(caCertPath)
 	if err != nil {
@@ -19,7 +19,7 @@ func main() {
 	}
 	pool.AppendCertsFromPEM(caCrt)
 
-	cliCrt, err := tls.LoadX509KeyPair("../client.crt", "../client.key")
+	cliCrt, err := tls.LoadX509KeyPair("/Users/wyy/code/github/https/certificate/client.crt", "/Users/wyy/code/github/https/certificate/client.key")
 	if err != nil {
 		fmt.Println("Loadx509keypair err:", err)
 		return

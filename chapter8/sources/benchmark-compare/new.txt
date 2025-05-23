@@ -1,9 +1,10 @@
 goos: darwin
-goarch: amd64
-BenchmarkStrcat-8   	22876281	        51.4 ns/op
-BenchmarkStrcat-8   	23847198	        55.3 ns/op
-BenchmarkStrcat-8   	22036873	        52.6 ns/op
-BenchmarkStrcat-8   	23761320	        50.2 ns/op
-BenchmarkStrcat-8   	23820279	        51.5 ns/op
+goarch: arm64
+cpu: Apple M3 Pro
+BenchmarkStrcat-12    	42391064	        28.98 ns/op
+BenchmarkStrcat-12    	46652594	        26.29 ns/op
+BenchmarkStrcat-12    	44387998	        27.29 ns/op
+BenchmarkStrcat-12    	43147424	        27.92 ns/op
+BenchmarkStrcat-12    	47017336	        26.72 ns/op
 PASS
-ok  	command-line-arguments	6.347s
+ok  	command-line-arguments	7.465s
