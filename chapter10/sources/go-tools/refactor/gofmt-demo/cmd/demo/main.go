@@ -1,10 +1,9 @@
 package main
 
 import (
-	"log"
-
 	"github.com/bigwhite/gofmt-demo/pkg/bar"
 	"github.com/bigwhite/gofmt-demo/pkg/foo"
+	"github.com/rs/zerolog/log"
 )
 
 func main() {
