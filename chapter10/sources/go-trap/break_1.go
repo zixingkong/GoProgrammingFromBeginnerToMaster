@@ -41,5 +41,4 @@ func main() {
 	c := make(chan int, 1)
 	c <- 11
 	breakWithForSelect(c)
-
 }

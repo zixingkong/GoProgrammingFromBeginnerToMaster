@@ -17,6 +17,7 @@ func main() {
 		len(b1), cap(b1), b1)
 	fmt.Printf("slice b: len(%d), cap(%d), elements(%v)\n",
 		len(b), cap(b), b)
+
 	fmt.Println("\nappend 22 to b1:")
 	b1 = append(b1, 22)
 	fmt.Printf("slice b1: len(%d), cap(%d), elements(%v)\n",
